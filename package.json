@@ -1,0 +1,22 @@
+{
+  "name": "dookie",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "build:memory": "set NODE_OPTIONS=--max-old-space-size=4096 && astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.9.2",
+    "astro-compress": "^2.2.26",
+    "tailwindcss": "^3.4.3",
+    "three": "^0.164.1",
+    "typescript": "^5.4.5"
+  }
+}
