@@ -10,6 +10,8 @@ import Footer from "@/components/Footer.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Dookie Server</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 
     <style>
       @font-face {
@@ -31,7 +33,7 @@ import Footer from "@/components/Footer.astro";
 		overflow: hidden;
 	  }
 
-      .pano-bg-container {
+      #panorama {
         position: fixed;
         top: 0px;
         left: 0px;
@@ -84,7 +86,7 @@ import Footer from "@/components/Footer.astro";
   </head>
   <body>
     <section>
-      <div class="pano-bg-container"></div>
+      <div id="panorama"></div>
 
       <div class="centered-container">
         <div class="banner-container">
@@ -94,12 +96,18 @@ import Footer from "@/components/Footer.astro";
       </div>
 	  <Footer/>
     </section>
-	
 
     <script>
-      import "@js/three.min.js";
-      import "@js/panolens.min.js";
-      import "@js/main.js";
-    </script>
+      document.addEventListener('DOMContentLoaded', () => {
+          pannellum.viewer('panorama', {
+              "type": "equirectangular",
+              "panorama": "/assets/pano_image.png",
+              "autoLoad": true,
+              "autoRotate": -2,
+              "pitch": -10
+          });
+      });
+  </script>
+    
   </body>
 </html>

@@ -6,8 +6,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@images/*": ["src/images/*"],
-      "@font/*": ["src/font/*"],
-      "@js/*": ["src/js/*"],
+      "@font/*": ["src/font/*"]
     }
   }
 }

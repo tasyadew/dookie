@@ -16,7 +16,6 @@
     "astro": "^4.9.2",
     "astro-compress": "^2.2.26",
     "tailwindcss": "^3.4.3",
-    "three": "^0.164.1",
     "typescript": "^5.4.5"
   }
 }
